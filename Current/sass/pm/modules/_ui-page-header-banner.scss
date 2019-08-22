@@ -1,0 +1,52 @@
+.header-banner {
+    position: relative;
+    margin-bottom: 20px;
+    // a properties
+    a {
+        color: #fff;
+    }
+    // p properties
+    p {
+        margin-bottom: 0;
+    }
+    .wrapper {
+        color: #fff;
+        .header-banner-content {
+            @include justify-content(center);
+            padding: 30px 10px;
+            .archive-description {
+                text-align: center;
+                font-weight: 300;
+            }
+        }
+        > section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            > img {
+                width: 100%;
+                height: 100% !important;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .header-banner {
+        margin-bottom: 30px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .header-banner {
+        margin-bottom: 45px;
+        .wrapper {
+            .header-banner-content {
+                padding: 45px 25px;
+            }
+        }
+    }
+}

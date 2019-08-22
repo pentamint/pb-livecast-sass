@@ -1,0 +1,37 @@
+// @import "../layout/content-sidebar";
+// @import "../layout/sidebar-content";
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+
+.post,
+.page {
+	margin: 0;
+}
+
+.site-content {
+	overflow: hidden; // parent height follow child floats
+	min-height: 37.5rem; // set min content area height
+}
+
+// remove top margins
+.page-content, .entry-content, .entry-summary {
+  margin: 0;
+}
+
+// page title hide on home
+.home .entry-header {
+  display: none;
+}
+
+// add top padding
+.site-content { // #content
+	.content-area { // #primary
+		padding-top: 5%;
+	}
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/

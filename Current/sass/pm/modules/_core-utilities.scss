@@ -1,0 +1,97 @@
+// ----- Atomic CSS ----- //
+// --- Spacing --- //
+.p0 {
+	padding: 0 !important;
+}
+.pt0 {
+	padding-top: 0 !important;
+}
+.pb0 {
+	padding-bottom: 0 !important;
+}
+.pr0 {
+	padding-right: 0 !important;
+}
+.pl0 {
+	padding-left: 0 !important;
+}
+.ptb0 {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+.prl0 {
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+}
+
+.m0 {
+	margin: 0 !important;
+}
+.mt0 {
+	margin-top: 0 !important;
+}
+.mt1 {
+	margin-top: 1rem !important;
+}
+.mt2 {
+	margin-top: 2rem !important;
+}
+.mb0 {
+	margin-bottom: 0 !important;
+}
+.mb1 {
+	margin-bottom: 1rem !important;
+}
+.mb2 {
+	margin-bottom: 2rem !important;
+}
+.ml0 {
+	margin-left: 0 !important;
+}
+.ml1 {
+	margin-left: 1rem !important;
+}
+.ml2 {
+	margin-left: 2rem !important;
+}
+.mr0 {
+	margin-right: 0 !important;
+}
+.mr1 {
+	margin-right: 1rem !important;
+}
+.mr2 {
+	margin-right: 2rem !important;
+}
+.ml0 {
+	margin-left: 0 !important;
+}
+.mtb0 {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+.mrl0 {
+	margin-right: 0 !important;
+	margin-left: 0 !important;
+}
+
+// --- Languages --- //
+.en {
+	font-family: $font__eng !important;
+}
+.kr {
+	font-family: $font__kor !important;
+}
+
+// --- Responsive --- //
+.pc-only {
+	display: none;
+}
+@include media-breakpoint-up($breakpoint__mobile-nav) {
+	.pc-only {
+		display: block;
+	}
+	.mobile-only {
+		display: none;
+	}
+}

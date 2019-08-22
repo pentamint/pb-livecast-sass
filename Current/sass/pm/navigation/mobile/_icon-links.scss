@@ -1,0 +1,80 @@
+@include media-breakpoint-down(md) {
+
+    // --- Mobile Header --- //
+    .site-header {
+        &.sticky {
+            #main-header {
+                .container {
+                    .site-branding {
+                        >a {
+                            // .custom-logo-link
+                            margin: 0 auto; // center logo position on mobile scroll
+                        }
+                    }
+                }
+            }
+        }
+        #main-header {
+            .container {
+                #mobile-header-widget-1 {
+                    display: block;
+                    position: absolute;
+                    // IE Fix
+                    top: 50%;
+                    transform: translateY(-50%);
+                    //
+                    left: 0;
+                    z-index: 9;
+
+                    .mobile-login {
+                        a {
+                            @include rfs(26);
+                        }
+                    }
+                }
+
+                .site-branding {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up($breakpoint__mobile-nav) {
+    .site-header {
+        #main-header {
+            .container {
+                #mobile-header-widget-1 {
+                    display: none;
+                }
+
+                .site-branding {
+                    text-align: initial;
+                }
+            }
+        }
+    }
+}
+
+/* ----- Responsive Mobile Header Widget Bootstrap Support ----- */
+// xs position
+#main-header #mobile-header-widget-1 {
+    padding-left: 15px;
+  }
+  
+  @include media-breakpoint-up(sm) {
+  
+    // sm position
+    #main-header #mobile-header-widget-1 {
+      padding-left: calc((100vw - 525px)/2);
+    }
+  }
+  
+  @include media-breakpoint-up(md) {
+  
+    // md position
+    #main-header #mobile-header-widget-1 {
+      padding-left: calc((100vw - 705px)/2);
+    }
+  }

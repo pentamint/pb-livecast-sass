@@ -1,0 +1,252 @@
+// ----- All Devices ----- //
+// --- Header --- //
+.site-header { // #masthead header
+  // header background
+  background-color: $base-color;
+  &.sticky {
+    // fixed header background
+    background-color: $base-color;
+  }
+  #main-header {
+    .container {
+      // Logo background
+      .site-branding {
+        background-color: $base-color;
+      }
+    }
+  }
+}
+// --- Footer --- //
+#top-footer {
+  background-color: $top-footer-bg-color;
+}
+#main-footer {
+  background-color: $footer-bg-color;
+  border-top-color: $secondary-color;
+}
+#bottom-footer {
+  background-color: $bottom-footer-bg-color;
+  border-top-color: $line-color-ng;
+  .container {
+    .row {
+      > div {
+        &:nth-of-type(1) {
+          // column 1
+          footer {
+            .site-info {
+              color: $font-color-ng;
+              > a {
+                color: $font-color-ng;
+                &:hover {
+                  color: $font-color-ng-ac;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ----- Medium Devices and Smaller (xs,sm,md) ----- //
+@media (max-width: 991.98px) {
+  // ------ Mobile Header ----- //  
+  .site-header {
+    // #masthead header
+    #main-header {
+      // header border top
+      border-top-color: $secondary-color;
+      .container {
+        // Logo background
+        nav {
+          // .navbar-primary .navbar
+          .nav-wrapper {
+            .navbar-collapse {
+              // .menu-primary
+              &.show {
+                // primary nav background
+                background-color: $ng-base-color;
+                border-left-color: $line-color-ng;
+                > ul {
+                  // #menu-primary-menu .navbar-nav
+                  > li {
+                    // .nav-item
+                    &:hover:before {
+                        // hover left highlight bar
+                        background-color: #00b9eb;
+                    }
+                    &.show:before {
+                        // dropdown show left highlight bar
+                        background-color: #00b9eb;
+                    }
+                    > a {
+                      // .nav-link
+                      color: $font-color-ng;
+                      &:hover {
+                          background-color: #0f182b;
+                      }
+                      &[aria-expanded="true"] {
+                        background-color: #0f182b;
+                        color: $font-color-ng;
+                        &:hover {
+                          background-color: #0f182b;
+                          color: $font-color-ng;
+                        }
+                      }
+                      &[aria-expanded="false"] {
+                        &:hover {
+                          background-color: #080c17;
+                        }
+                      }
+                    }
+                    > ul {
+                      // .dropdown-menu
+                      &.show {
+                        > li {
+                          // .nav-item
+                          > a {
+                            // .dropdown-item
+                            background-color: #080c17;
+                            color: $font-color-ng;
+                            &:hover {
+                              color: $font-color-ng;
+                            }
+                          }
+                          &.current-menu-item {
+                            > a {
+                              // .dropdown-item
+                              background-color: $ng-base-sub-color;
+                              color: $font-color-ng;
+                              &:hover {
+                                background-color: $ng-base-sub-color;
+                                color: $font-color-ng;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                } // .navbar-nav
+              }
+            } // .navbar-collapse
+          }
+        }
+      }
+    } // #main-header
+  } // header
+}
+
+// ----- Large Devices and Larger (lg,xl) ----- //
+@media (min-width: 992px) {
+  // ----- PC Header ----- //
+  .site-header {
+    // #masthead header
+    #top-header {
+      // Top header background
+      background-color: $base-color;
+      // PC header border top
+      border-top-color: $secondary-color;
+      // Top header right widget divider
+      li:not(:first-child):before {
+        background-color: $line-color;
+      }
+    }
+    #main-header {
+      .container {
+        nav {
+          // .navbar-primary .navbar
+          .nav-wrapper {
+            .navbar-collapse {
+              // .menu-primary
+              > ul {
+                // #menu-primary-menu .navbar-nav
+                > li {
+                  // .nav-item
+                  > a {
+                    // .nav-link
+                    &:hover {
+                      // main nav menu item hover color
+                      color: $accent-color;
+                    }
+                  }
+                  &.current-menu-item {
+                    > a {
+                      // .nav-link
+                      // current main nav menu item color
+                      color: $accent-color;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #top-footer {
+    background-color: $top-footer-bg-color;
+  }
+  #main-footer {
+    background-color: $footer-bg-color;
+    border-top-color: $secondary-color;
+  }
+  #bottom-footer {
+    background-color: $bottom-footer-bg-color;
+    border-top-color: $line-color-ng;
+    .container {
+      .row {
+        > div {
+          &:nth-of-type(1) {
+            // column 1
+            footer {
+              .site-info {
+                color: $font-color-ng;
+                > a {
+                  color: $font-color-ng;
+                  &:hover {
+                    color: $font-color-ng-ac;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ----- Elements & Components ----- //
+
+// --- Buttons --- //
+// Bootstrap Buttons Light Area //
+.btn.btn-primary:not(:disabled):not(.disabled):active,
+.btn.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn.btn-primary.dropdown-toggle {
+  background-color: $accent-color;
+  border-color: $accent-color;
+}
+.btn.btn-primary {
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+  &:hover {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+}
+
+// --- Custom Mobile Icons --- //
+#mobile-header-widget-1 {
+  a {
+    // my account widget icon
+    color: $font-color;
+    &:hover {
+      color: $font-color-ac;
+    }
+  }
+}
+
+// ----- //

@@ -1,0 +1,73 @@
+/* ----- Light Color Scheme ----- */
+
+// ----- Theme Palette ----- //
+// Primary Color - Logo
+$primary-color: #1f2d60;
+// Secondary Color - Elements, BG
+$secondary-color: #2643AD;
+// Tertiery Color
+$tertiery-color: #495FAD;
+// Accent Color - Hover Effect
+$accent-color: #f6be07;
+// Accent Sub Color
+$accent-sub-color: #AD8515;
+
+// ----- Typography ----- //
+// Primary - Light Area Font
+$font-color: #333;
+// Negative Primary - Dark Area Font
+$font-color-ng: #e9e9e9;
+// Accent - Light Area Accent
+$font-color-ac:  #2643AD;
+// Negative Accent - Dark Area Accent
+$font-color-ng-ac: #f6be07;
+
+// ----- Structural ----- //
+// --- Header --- //
+// Base Color - background header, body etc.
+$base-color: #fff;
+// Base Sub Color - background header sub, body sub etc.
+$base-sub-color: #f2f2f2;
+
+// --- Mobile Navigation --- //
+// Negative Base Color - Nav background
+$ng-base-color: #23282d;
+// Negative Base Sub Color - Expanded nav background
+$ng-base-sub-color: #191e23;
+
+// --- Footer --- //
+// Top footer BG Color
+$top-footer-bg-color: #2643AD;
+// Main footer BG Color
+$footer-bg-color: #0f182b;
+// Bottom footer BG Color
+$bottom-footer-bg-color: #080c17;
+
+// ----- Elements ------ //
+// Line / Divider - Light Area
+$line-color: #e2e2e2;
+// Negative Line / Divider - Dark Area
+$line-color-ng: #444;
+
+// ----- Underscore Default ----- //
+
+$color__background-body: #f1f1f1;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #e6e6e6;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__link: royalblue;
+$color__link-visited: purple;
+$color__link-hover: midnightblue;
+$color__text-main: #404040;
+
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #ccc;
+$color__border-abbr: #666;

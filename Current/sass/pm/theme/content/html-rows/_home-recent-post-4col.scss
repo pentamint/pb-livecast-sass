@@ -1,0 +1,77 @@
+// home recent post 4 columns
+// default
+.home-recent-post {
+  .container {
+      .row {
+          > div { // col div
+            margin-bottom: 1rem;
+            .card-wrapper {
+              .recent-post-topbar { // topbar
+                @include flexbox;
+                @include justify-content(space-between);
+                @include align-items(center);
+                padding: 10px 10px;
+               .topbar-icon {
+                    width: 1rem;
+                }
+                .recent-post-title {
+                    @include flex-basis(80%);
+                    margin-bottom: 0;
+                }
+                .topbar-link-icon {
+                    width: 1rem;
+                }
+            }
+            .recent-post-list { // ul container
+              padding: 15px 10px;
+                li {
+                    margin-bottom: .5rem;
+                    height: 1.2rem;
+                    overflow: hidden;
+                  }
+              }
+            }
+          }
+      }
+  }
+}
+// theme custom
+.home-recent-post {
+    .container {
+        .row {
+            > div { // col div
+                .card-wrapper {
+                  border: 1px solid #e9e9e9;
+                  .recent-post-topbar { // topbar
+                    background-color: #fafafa;
+                    border-bottom: 1px solid #e9e9e9;
+                    .topbar-icon {
+                    }
+                    .recent-post-title {
+                      @include rfs(14);
+                      &.safe {
+                        // color: #006dff;                      
+                      }
+                      &.caught {
+                        // color: #e827f4;                      
+                      }
+                      &.new {
+                        // color: #ff7700;                      
+                      }
+                      &.sports {
+                        // color: #8b28ff;                      
+                      }
+                    }
+                    .topbar-link-icon {
+                    }
+                  }
+                  .recent-post-list { // ul container
+                    li {
+                      @include rfs(14);
+                    }
+                  }
+                }
+            }
+        }
+    }
+}

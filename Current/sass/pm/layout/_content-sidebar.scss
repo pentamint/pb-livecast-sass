@@ -1,0 +1,31 @@
+body.has-sidebar {
+	#primary {
+		@include flexbox;
+		@include flex-wrap(wrap);
+		#main {
+			@include flex-basis($size__site-main-mobile);
+			max-width: $size__site-main-mobile;
+		}
+		#secondary {
+			@include flex-basis($size__site-sidebar-mobile);
+			max-width: $size__site-sidebar-mobile;
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	body.has-sidebar {
+		#primary {
+			@include flexbox;
+			#main {
+				@include flex-basis($size__site-main);
+				padding-right: 20px;
+				max-width: $size__site-main;
+			}
+			#secondary {
+				@include flex-basis($size__site-sidebar);
+				max-width: $size__site-sidebar;
+			}
+		}
+	}
+}

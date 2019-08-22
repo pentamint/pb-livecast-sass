@@ -1,0 +1,31 @@
+/* ----- Page Template ----- */
+
+
+
+@include media-breakpoint-down(lg) { // 1199.98px and down
+
+}
+@include media-breakpoint-down(md) { // 991.98px and down
+
+}
+@include media-breakpoint-down(sm) { // 767.98px and down
+
+}
+@include media-breakpoint-down(xs) { // 575.98px and down
+
+}
+
+
+
+@include media-breakpoint-up(sm) { // 576px and up
+
+}
+@include media-breakpoint-up(md) { // 768px and up
+
+}
+@include media-breakpoint-up(lg) { // 992px and up
+
+}
+@include media-breakpoint-up(xl) { // 1200px and up
+
+}

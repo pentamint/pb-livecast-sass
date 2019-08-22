@@ -1,0 +1,25 @@
+// remove edit button
+.tablepress caption {
+  display: none;
+}
+
+// table h2 title
+.tablepress-table-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+// tables with header
+.tablepress tfoot th, .tablepress thead th { // header background color
+  background-color: #d9d9d9 !important; // default #d9edf7
+}
+
+.tablepress .sorting:hover, .tablepress .sorting_asc, .tablepress .sorting_desc {
+  background-color: #7e2a90 !important; // default #049cdb
+  color: #fff;
+}
+
+.green.tp_nohead .tablepress {
+  border-top: 2px solid #90c31f;
+  border-bottom: 2px solid #90c31f;
+}

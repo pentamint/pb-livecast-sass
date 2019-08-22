@@ -1,0 +1,120 @@
+/*!
+Theme Name: Pentamint WP Theme
+Theme URI: http://underscores.me/
+Author: Pentamint Co., Ltd.
+Author URI: https://www.pentamint.com
+Description: Theme developed by Paris Croissant Co., Ltd. for Paris Baguette
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: biz.paris.co.kr
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Pentamint WP Theme is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+@import "pm/variables-site/variables-site";
+@import "pm/mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "normalize";
+
+/*--------------------------------------------------------------
+# Initialize Bootstrap
+--------------------------------------------------------------*/
+@import "../bootstrap/scss/bootstrap"; // if dedicated theme exist, comment out
+
+/*--------------------------------------------------------------
+# Initialize Theme Defaults
+--------------------------------------------------------------*/
+@import "pm/base";
+@import "pm/modules/core-cross-browser";
+@import "pm/modules/core-gutenberg"; // if dedicated page builder exist, comment out
+@import "pm/modules/core-bootstrap"; // if dedicated theme exist, comment out
+@import "pm/modules/core-utilities";
+
+/*--------------------------------------------------------------
+# Initialize Woocommerce
+--------------------------------------------------------------*/
+@import "pm/modules/plugin-woocommerce";
+
+/*--------------------------------------------------------------
+# Initialize Theme Customizations
+--------------------------------------------------------------*/
+@import "pm/theme/colors";
+@import "pm/theme/transitions";
+@import "pm/theme/typography";
+@import "pm/theme/navigation";
+@import "pm/theme/header";
+@import "pm/theme/content";
+@import "pm/theme/footer";
+
+/*--------------------------------------------------------------
+# Custom UI Components
+--------------------------------------------------------------*/
+
+@import "pm/modules/ui-searchform";
+@import "pm/modules/ui-social-widget";
+@import "pm/modules/ui-page-header-banner";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "pm/elements/elements";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+@import "forms/forms";
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+@import "modules/accessibility";
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+@import "modules/alignments";
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+@import "modules/clearings";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "site/secondary/widgets";
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+@import "modules/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "media/media";
+
+/*--------------------------------------------------------------
+# Applications
+--------------------------------------------------------------*/
+@import "pm/variables-site/hamburgers-settings";
+@import "pm/applications/hamburgers/hamburgers";
+
+/*--------------------------------------------------------------
+# Theme Plugins & Modules
+--------------------------------------------------------------*/
+@import "pm/modules/plugin-custom-content-shortcode";
+@import "pm/modules/plugin-tablepress";
+@import "pm/modules/plugin-kboard";

@@ -1,0 +1,14 @@
+.loop-pc {
+  display: none;
+}
+.loop-mobile {
+  display: block;
+}
+@include media-breakpoint-up(md) {
+  .loop-pc {
+    display: block;
+  }
+  .loop-mobile {
+    display: none;
+  }
+}

@@ -1,0 +1,31 @@
+/*--------------------------------------------------------------
+## Sidebar Layout
+--------------------------------------------------------------*/
+// Sidebar Right
+@import "../layout/content-sidebar";
+// Sidebar Left
+// @import "../layout/sidebar-content";
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+@import "../../site/primary/posts-and-pages";
+@import "../content/default"; // pm resets
+@import "content/front-page"; // homepage
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+@import "../../site/primary/comments";
+
+/* ----- Theme Style ----- */
+// ----- Global ----- //
+
+@include media-breakpoint-up($breakpoint__mobile-nav) {
+	// all posts & pages spacing bottom
+	.site-content {
+		margin-left: $size__site-sidebar-header;
+		padding-bottom: 4em;
+	}
+}
+// ----- End Global ----- //

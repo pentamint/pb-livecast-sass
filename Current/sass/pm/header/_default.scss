@@ -1,0 +1,73 @@
+/* ----- Mobile Default ----- */
+#masthead {
+  // .pm-side-header
+  @include flexbox;
+  @include align-items(center); // vertical middle elements
+  @include justify-content(center); // mobile center logo 
+  position: fixed;
+  width: $size__site-sidebar-header;
+  top: 0;
+  z-index: 10;
+
+  .site-branding {
+    .custom-logo-link {
+      display: block;
+      max-width: $size__logo-mobile-x;
+      max-height: $size__logo-mobile-y;
+      margin: 0 auto;
+    }
+
+    p {
+      display: none;
+    }
+  }
+
+  .widget {
+    margin: 0; // Header widget margin padding reset
+  }
+}
+
+/* ----- PC Default ----- */
+@include media-breakpoint-up($breakpoint__mobile-nav) {
+  #masthead {
+    .site-branding {
+      .custom-logo-link {
+        max-width: $size__logo-pc-x;
+        max-height: $size__logo-pc-y;
+      }
+    }
+  }
+}
+
+/* ----- Responsive Hamburger Menu Position Bootstrap Support ----- */
+// xs position
+#main-header .navbar-primary .hamburger {
+  padding-right: 15px;
+}
+
+@include media-breakpoint-up(sm) {
+
+  // sm position
+  #main-header .navbar-primary .hamburger {
+    padding-right: calc((100vw - 525px)/2);
+  }
+}
+
+@include media-breakpoint-up(md) {
+
+  // md position
+  #main-header .navbar-primary .hamburger {
+    padding-right: calc((100vw - 705px)/2);
+  }
+}
+
+/* ----- Responsive Sidebar Header Top Margin ----- */
+#masthead {
+  margin-top: 46px;
+}
+
+@media (min-width: 783px) {
+  #masthead {
+    margin-top: 32px;
+  }
+}

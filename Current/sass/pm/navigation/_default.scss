@@ -1,0 +1,69 @@
+header { // #masthead .site-header
+  #top-header {
+    .container {
+      nav { // .navbar-secondary .navbar
+        .nav-wrapper {
+          .navbar-collapse { // .menu-secondary
+            > ul { // #menu-secondary-menu .navbar-nav
+              > li { // .nav-item
+                > a { // .nav-link
+                  font-family: $font__sub-nav;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #main-header {
+    .container {
+      nav { // .navbar-primary .navbar
+        .nav-wrapper {
+          > button { // .navbar-toggle .hamburger
+            position: absolute; // menu list allow change position
+            z-index: 10; // position above mobile menu div
+          }
+          .navbar-collapse { // .menu-primary
+            > ul { // #menu-primary-menu .navbar-nav
+              > li { // .nav-item
+                > a { // .nav-link
+                  font-family: $font__nav;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up($breakpoint__mobile-nav) {
+  header { // #masthead .site-header
+    #main-header {
+      .container {
+        nav { // .navbar-primary .navbar
+          .nav-wrapper {
+            button.hamburger { // .navbar-toggle .hamburger
+              display: none !important; // hide hamburger on larger devices
+            }
+            .navbar-collapse { // .menu-primary
+              > ul { // #menu-primary-menu .navbar-nav
+                // justify menu center
+                @include justify-content($justify-content__main-nav);
+                > li { // .nav-item
+                  > ul { // .dropdown-menu
+                    &.show {
+                      position: absolute; // dropdown ignore width
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

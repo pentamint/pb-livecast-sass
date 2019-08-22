@@ -1,0 +1,38 @@
+/**
+ * Module: Custom Social Widget
+ *
+ */
+.top-footer-social-links {
+    .widget {
+        // remove default margin bottom
+        margin: 0;
+    }
+}
+.social_links {
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    > a {
+        // icon size
+        @include rfs(18);
+        padding: .75rem;
+        svg {
+            path {
+                // icon color
+                fill: #fff;
+            }
+        }
+        &:hover {
+            svg {
+                path {
+                    fill: $accent-color;
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-up($breakpoint__mobile-nav) {
+    .social_links {
+        @include justify-content(flex-end);
+    }
+}

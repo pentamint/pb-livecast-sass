@@ -1,0 +1,8 @@
+@import "color-palette"; // set theme color set
+@import "typography"; // set theme font family
+@import "structure"; // set general theme layout, menu, responsive etc.
+@import "../../variables-site/columns"; // set theme column widths, margins
+
+// Custom Made SCSS
+@import "logo-size"; // set logo xy size
+@import "header-heights"; // set responsive header height

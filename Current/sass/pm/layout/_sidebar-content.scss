@@ -1,0 +1,14 @@
+@import "content-sidebar";
+
+@include media-breakpoint-up(md) {
+	body.has-sidebar {
+		#primary {
+			#main {
+				@include order(2);
+			}
+			#secondary {
+				@include order(1);
+			}
+		}
+	}
+}

@@ -1,0 +1,60 @@
+// ----- Gutenberg ----- //
+// --- Default --- //
+
+// --- Bootstrap Support --- //
+// - Grid System Fixes - //
+@media (min-width: 600px) {
+  .wp-block-column:nth-child(2n) {
+    margin-left: 0; // 32px;
+  }
+}
+@include media-breakpoint-up(md) {
+  .wp-block-column:not(:first-child) {
+    margin-left: 0; // 32px
+  }
+}
+
+// ----- Stackable - Gutenberg Blocks ----- //
+// --- Default --- //
+.ugb-container {
+  // remove top & bottom margins
+  margin-top: 0;
+  margin-bottom: 0;
+  // add top padding
+  padding-top: 5rem;
+  // remove top padding on first child
+  &:first-child {
+    padding-top: 0;
+  }
+} // !--- Default --- //
+// --- Bootstrap Support for Stackable - Gutenberg Blocks --- //
+// - Reset Stackable padding properties - //
+.ugb--has-background, .ugb-has-background {
+  padding-left: 0;
+  padding-right: 0;
+}
+.ugb-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media screen and (max-width: 600px) {
+  .ugb--has-background, .ugb-has-background, .ugb-testimonial.ugb-testimonial--design-basic .ugb-testimonial__item, .ugb-video-popup, .ugb-video-popup:not([class*=ugb-video-popup--v]) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .ugb-card, .ugb-container, .ugb-cta {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 782px) {
+  .ugb--has-background, .ugb-has-background, .ugb-testimonial.ugb-testimonial--design-basic .ugb-testimonial__item, .ugb-video-popup, .ugb-video-popup:not([class*=ugb-video-popup--v]) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .ugb-card, .ugb-container, .ugb-cta {
+    padding-left: 0;
+    padding-right: 0;
+  }
+} // !- Reset Stackable padding properties - //
+

@@ -1,0 +1,72 @@
+/**
+ * Module: Custom Bootstrap searchform
+ *
+ * Installation
+ *
+ * 1. add searchform.php to wp main folder
+ * 2. add <?php get_search_form(); ?> to php template
+ * 3. add below searchform toggle snippit to php template
+    <button class="btn btn-primary btn-search-toggle" type="button" data-toggle="collapse" data-target="#searchform" aria-expanded="false" aria-controls="saerchform">
+		<i class="fas fa-search"></i>
+	</button>
+ *
+ */
+
+/* ----- Primary Navbar Searchform ----- */
+// --- all viewports --- //
+nav.navbar-primary {
+  #searchform-container {
+    form {
+      .input-group {
+        >input {
+          padding-left: 0.5rem;
+
+          @include inputPlaceholder() {
+            @include rfs(14);
+          }
+        }
+
+        >span {
+          >button {
+            // floating button
+            padding: 0.4375rem 0.75rem;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// --- xs, sm, md only --- //
+@include media-breakpoint-down(md) {
+  nav.navbar-primary {
+    #searchform-container {
+      // position searchform below header
+      position: absolute;
+      // IE fix
+      top: 45px;
+      right: 0;
+    }
+  }
+  .btn.btn-primary {
+    display: none;
+  }
+}
+
+// --- lg, xl only --- //
+@include media-breakpoint-up($breakpoint__mobile-nav) {
+  nav.navbar-primary {
+    #searchform-container {
+      // position searchform below header
+      position: absolute;
+      // IE fix
+      top: 45px;
+      right: 0;
+    }
+  }
+}
+
+// ----- //
+

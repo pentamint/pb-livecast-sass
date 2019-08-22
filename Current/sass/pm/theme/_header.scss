@@ -1,0 +1,21 @@
+@import "../header/default";
+
+/* ----- Theme Custom ----- */
+#masthead {
+  background: linear-gradient(135deg,#8f75da 0,#727cf5 60%);
+  padding: 15px 30px;
+  .slimScrollDiv {
+    width: 100%;
+    .slimscroll-menu {
+      .site-branding {
+        margin: 1rem 0;
+      }
+    }
+  }
+}
+@include media-breakpoint-up($breakpoint__mobile-nav) {
+
+}
+@include media-breakpoint-down(md) {
+
+}

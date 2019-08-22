@@ -1,0 +1,31 @@
+@import "../footer/default";
+
+// ----- Theme Style ----- //
+
+.site-footer {
+  .container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #ccc;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .site-footer {
+    text-align: center;
+  }
+}
+
+@include media-breakpoint-up($breakpoint__mobile-nav) {
+  .site-footer {
+    .container {
+      .row {
+        .col-md-3 {
+          .pm-system-info {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

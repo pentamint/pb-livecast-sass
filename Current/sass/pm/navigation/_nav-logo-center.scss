@@ -1,0 +1,31 @@
+@include media-breakpoint-up($breakpoint__mobile-nav) { // <- set bootstrap mobile menu breakpoint
+	// ie fallback for multiple units calc
+	$var: 50%;
+	$foo: 2.5rem;
+	.site-branding {
+		margin-left: unquote("calc( #{$var} - #{$foo} )");
+		margin-right: unquote("calc( #{$var} - #{$foo} )");
+	}
+	// remove mobile absolute position
+	.navbar {
+		position: relative;
+	}
+	.navbar-nav {
+		flex-direction: $flex-direction__main-nav; // menu direction
+	}
+	.navbar-collapse {
+		ul {
+			li {
+				ul.dropdown-menu.show {
+					li {
+						a.dropdown-item {
+							padding-left: 1rem;
+							color: $color__link;
+							@include rfs(14);
+						}
+					}
+				}
+			}
+		}
+	}
+}

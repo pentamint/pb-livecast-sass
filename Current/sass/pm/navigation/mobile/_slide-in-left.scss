@@ -1,0 +1,125 @@
+// ----- Default ----- //
+#navbar-collapse-1.show #main-menu {
+    padding-top: $height__xs-main-header;
+}
+@include media-breakpoint-down(sm) {
+    #navbar-collapse-1.show #main-menu {
+        padding-top: $height__sm-main-header;
+    }
+}
+@include media-breakpoint-down(md) {
+    #navbar-collapse-1.show #main-menu {
+        padding-top: $height__md-main-header;
+    }
+}
+
+
+// --- Layout --- //
+header { // #masthead .site-header
+    #main-header {
+        .container {
+            nav { // .navbar-primary .navbar
+                width: 100%; // expand collapsed wrapper
+                position: absolute;
+                padding: 0;
+                top: 0;
+                left: 0;
+                z-index: 1000; // order navbar above page content
+                .nav-wrapper {
+                    .navbar-collapse { // .menu-primary
+                        // Mobile menu transition initial state properties -> to be removed for PC
+                        width: 0;
+                        @include transition(width .1s ease-in-out, opacity .1s linear);
+                        >ul { // #menu-primary-menu, .navbar-nav
+                            >li { // .nav-item
+                                >a { // .nav-link
+                                    opacity: 0;
+                                }
+                            }
+                        }
+                        &.show {
+                            display: block;
+                            position: absolute;
+                            right: 0;
+                            width: 100%; // mobile menu transition end state properties
+                            height: 100vh;
+                            border-left-style: solid;
+                            border-left-width: 1px;
+                            >ul { // #menu-primary-menu, .navbar-nav
+                                >li { // .nav-item
+                                    >a { // .nav-link
+                                        opacity: 1; // mobile menu transition end state properties
+                                    }
+                                    >ul { // .dropdown-menu
+                                        &.show {
+                                            // dropdown menu spacing
+                                            margin: 0;
+                                            padding: 0;
+                                            border: none;
+                                            border-radius: 0;
+                                            >li { // .nav-item
+                                                &.current-menu-item {
+                                                    >a { // .dropdown-item
+                                                        // active link bold
+                                                        font-weight: 700;
+                                                    }
+                                                }
+                                                >a { // .dropdown-item
+                                                    &:first-child {
+                                                        // removed border radius
+                                                        border-top-left-radius: 0;
+                                                        border-top-right-radius: 0;
+                                                        }
+                                                    &:last-child {
+                                                        // removed border radius
+                                                        border-bottom-right-radius: 0;
+                                                        border-bottom-left-radius: 0;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up($breakpoint__mobile-nav) {
+    header {
+        #main-header {
+            .container {
+                nav { // .navbar-primary .navbar
+                    // unset mobile navbar settings
+                    position: inherit;
+                    top: inherit;
+                    @include justify-content(flex-end);
+                    .nav-wrapper {
+                        button.hamburger { // .hamburger .navbar-toggle
+                            display: none;
+                        }
+                        .navbar-collapse { // .menu-primary
+                            // reset slide in menu top gap
+                            margin-top: 0;
+                            // display none reset
+                            @include flexbox;
+                            @include justify-content(flex-end);
+                            width: 100%;
+                            >ul { // #menu-primary-menu, .navbar-nav
+                                >li { // .nav-item
+                                    >a { // .nav-link
+                                        opacity: 1; // opacity 0 reset
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

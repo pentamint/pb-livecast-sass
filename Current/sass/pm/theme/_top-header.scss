@@ -1,0 +1,133 @@
+/* ----- Top Header Design ----- */
+// --- Hide on mobile --- //
+#top-header {
+    display: none;
+    // Top header apply flex
+    .container {
+        @include flexbox;
+    }
+}
+// --- //
+
+@include media-breakpoint-up($breakpoint__mobile-nav) { // <- set bootstrap mobile menu breakpoint
+    // --- Top header properties --- //
+    #top-header {
+        // show on PC
+        display: block;
+    }
+    // top header hide on fixed header scroll
+    .site-header.sticky #top-header {
+        display: none;
+    }
+    // --- //
+
+    // --- Widget left text widget design --- //
+    #top-header {
+        // top header bottom line
+        border-bottom: 1px solid #e9e9e9;
+        .container {
+            // left widget text
+            #header-widget-1 {
+                @include flexbox;
+                @include align-items(center);
+                margin-left: 110px; // widget positioning
+                width: 100%; // extend to 50%
+                .widget {
+                    .textwidget {
+                        p {
+                            display: block;
+                            @include rfs(12);
+                            font-weight: 700;
+                            margin-bottom: 0;
+                            margin-top: .2rem; 
+                        }
+                    }
+                }
+            }
+            // top header left widget
+            nav.navbar-top-header-left {
+                width: 100%;
+                // top header nav align left
+                @include justify-content(flex-start);
+                .nav-wrapper {
+                    .navbar-collapse {
+                        @include flexbox;
+                        >ul { // #top-header-left-menu .navbar-nav
+                            >li { // .nav-item
+                                // menu item divider
+                                &:not(:first-child):before  {
+                                    display: block;
+                                    position: absolute;
+                                    top: 14px;
+                                    right: 58px;
+                                    width: 1px;
+                                    height: .5rem;
+                                    content: '';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // top header right widget
+            nav.navbar-top-header-right {
+                width: 100%;
+                // top header nav align right
+                @include justify-content(flex-end);
+                .nav-wrapper {
+                    .navbar-collapse {
+                        @include flexbox;
+                        >ul { // #top-header-right-menu .navbar-nav
+                            >li { // .nav-item
+                                // menu item divider
+                                &:not(:first-child):before  {
+                                    display: block;
+                                    position: absolute;
+                                    top: 14px;
+                                    right: 58px;
+                                    width: 1px;
+                                    height: .5rem;
+                                    content: '';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // secondary nav divider login pos
+    body.logged-in #top-header .container .navbar-top-header-right .nav-wrapper .navbar-nav li:not(:first-child):before {
+        right: 68px;
+    }
+}
+
+// ----- Responsive top header height
+// top header xs height
+#top-header .container {
+    height: $height__xs-top-header;
+}
+@include media-breakpoint-up(sm) {
+    // top header height
+    #top-header .container {
+        height: $height__sm-top-header;
+    }
+}
+@include media-breakpoint-up(md) {
+    // top header height
+    #top-header .container {
+        height: $height__md-top-header;
+    }
+}
+@include media-breakpoint-up(lg) {
+    // top header height
+    #top-header .container {
+        height: $height__lg-top-header;
+    }
+}
+@include media-breakpoint-up(xl) {
+    // top header height
+    #top-header .container {
+        height: $height__xl-top-header;
+    }
+}

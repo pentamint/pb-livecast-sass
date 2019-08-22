@@ -1,0 +1,162 @@
+@import "../navigation/default";
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+@import "../navigation/links";
+
+/*--------------------------------------------------------------
+## Post Navigation
+--------------------------------------------------------------*/
+// @import "../navigation/post-nav-wp"; // Standard WP Post Nav
+@import "../navigation/post-nav-ajax-load-more"; // Custom AJAX Post Nav with Loadmore
+
+/*--------------------------------------------------------------
+## Mobile Menu Type
+--------------------------------------------------------------*/
+// @import "../navigation/mobile/slide-in-left";
+@import "../navigation/mobile/slide-in-right";
+
+// Optional header components
+@import "../navigation/mobile/icon-links";
+
+/*--------------------------------------------------------------
+## Mobile Menu Design
+--------------------------------------------------------------*/
+// Slide menu design v1 - left bar block on hover
+@import "../navigation/mobile/design/slide-v1";
+//
+
+/* ----- Theme Style ----- */
+
+header { // #masthead .site-header
+  #main-header {
+    .container {
+      // mobile icon link repositioned
+      #mobile-header-widget-1 {
+        margin-top: 3px;
+        // mobile icon link size
+        a {
+          .svg-inline--fa {
+              @include rfs(28);
+          }
+        }
+      }
+      nav { // .navbar-primary .navbar
+        // 1st depth menu item font size
+        @include rfs(14);
+        .nav-wrapper {
+          .navbar-collapse { // .menu-primary
+            > ul { // #menu-primary-menu .navbar-nav
+              > li { // .nav-item
+                > ul { // .dropdown-menu
+                  // 2nd depth menu item font size
+                  @include rfs(14);
+                  > li { // .nav-item
+                    > a { // .dropdown-item
+                      // 2nd depth menu item spacing
+                      padding: 0.5rem 0 0.5rem 1rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up($breakpoint__mobile-nav) {
+  header { // #masthead .site-header
+    #top-header {
+      .container {
+        nav { // .navbar-secondary .navbar
+          // remove top and bottom padding
+          padding: 0;
+          .nav-wrapper {
+            .navbar-collapse { // .menu-secondary
+              > ul { // #menu-secondary-menu .navbar-nav
+                // reset bootstrap default menu direction column to row
+                @include flex-direction(row);
+                > li { // .nav-item
+                  > a { // .nav-link
+                    // PC top nav menu item design
+                    padding: 0.28rem 0.75rem;
+                    @include rfs(11);
+                    font-weight: 900;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #main-header {
+      .container {
+        nav { // .navbar-primary .navbar
+          .nav-wrapper {
+            .navbar-collapse { // .menu-primary
+              > ul { // #menu-primary-menu .navbar-nav
+                // reset bootstrap default menu direction column to row
+                @include flex-direction(row);
+                > li { // .nav-item
+                  > a { // .nav-link
+                    // PC main nav menu item spacing                    
+                    padding: 0.5rem 1.25rem;
+                    @include rfs(14);
+                    font-weight: 900;
+                  }
+                  > ul { // .dropdown-menu
+                    // PC main nav expanded dropdown menu top border design                   
+                    border-top: 3px solid #2643AD;
+                    &.show {
+                      > li { // .nav-item
+                        > a { // .dropdown-item
+                          // dropdown item font size
+                          @include rfs(12);
+                          &:hover {
+                            font-weight: 900;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &.sticky {
+      // on scroll change header layout
+      #main-header {
+        .container {
+          .site-branding {
+            position: relative;
+          }
+          nav { // .navbar-primary .navbar
+            .nav-wrapper {
+              .navbar-collapse { // .menu-primary
+                > ul { // #menu-primary-menu .navbar-nav
+                   > li { // .nav-item
+                     &:nth-child(3) {
+                      margin-right: 0;
+                     }
+                     &:nth-child(4) {
+                      margin-left: 0;
+                     }
+                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,43 @@
+// Post navigation
+.post-navigation {
+  width: 100%;
+  .nav-links { // wrapper
+    @include flexbox;
+    @include justify-content(space-between);
+    @include flex-wrap(wrap);
+    .nav-previous {
+      padding: 15px;
+      margin-top: 15px;
+      flex-basis: 20%;
+    }
+    .nav-next {
+      padding: 15px;
+      margin-top: 15px;
+      flex-basis: 20%;
+    }
+    .title {
+      display: block;
+    }
+    .post-title {
+      display: block;
+    }
+  }
+  .fa-chevron-left {
+    margin-right: 5px;
+  }
+  .fa-chevron-right {
+    margin-left: 5px;
+  }
+}
+@include media-breakpoint-up(md) {
+  .post-navigation {
+    .nav-links {
+      .nav-previous {
+        max-width: 40%;
+      }
+      .nav-next {
+        max-width: 40%;
+      }
+    }
+  }
+}

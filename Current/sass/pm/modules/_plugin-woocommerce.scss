@@ -1,0 +1,123 @@
+/*
+Theme Name: PBBiz
+
+WooCommerce styles override
+*/
+
+.woocommerce .entry-summary {
+  margin-bottom: 3rem;
+}
+.woocommerce .site-main {
+	margin: 2rem 0;
+}
+.woocommerce .products {
+  margin: 0 auto;
+}
+.woocommerce .products .product {
+  text-align: center;
+}
+.woocommerce .product .attachment-woocommerce_thumbnail {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.single-product div.product {
+  width: 100%;
+}
+.woocommerce-product-gallery .wp-post-image {
+  height: 95vw;
+  padding: 4rem;
+  margin: 3rem 0 1rem;
+  text-align: center;
+  font-weight: 700;
+}
+.product_meta {
+  margin-bottom: 2rem;
+}
+.related.products h2 {
+  margin-bottom: 2rem;
+}
+.related.products .woocommerce-loop-product__link img {
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+.related.products .products {
+  @include flexbox;
+}
+.related.products .products .product {
+  text-align: center;
+}
+@include media-breakpoint-up(sm) { // 576px and up
+  .woocommerce-product-gallery .wp-post-image {
+    height: 85vw;
+  }
+}
+@include media-breakpoint-up(md) { // 768px and up
+  .woocommerce .entry-summary {
+    float: left;
+    width: 35%;
+    padding: 3rem 0 0;
+  }
+  .woocommerce .woocommerce-product-gallery {
+    float: left;
+    width: 60%;
+  }
+  .woocommerce-product-gallery .wp-post-image {
+    margin: 0 auto;
+    height: 55vw;
+    padding: 3rem;
+  }
+  .related.products .woocommerce-loop-product__link img {
+    padding: 2rem;
+  }
+}
+@include media-breakpoint-up(lg) { // 992px and up
+  .woocommerce-product-gallery .wp-post-image {
+    height: 60vw;
+    padding: 4rem;
+  }
+}
+@include media-breakpoint-up(xl) { // 1200px and up
+  .woocommerce-product-gallery .wp-post-image {
+    height: 52vw;
+  }
+}
+
+/**
+ * WooCommerce color variables
+ */
+$woocommerce__color-error: #e2401c;
+$woocommerce__color-success: #0f834d;
+$woocommerce__color-info: #3D9CD2;
+
+/**
+ * Shop tables
+ */
+@import "shop/tables";
+
+/**
+ * Products
+ */
+@import "shop/products";
+
+/**
+ * Single product
+ */
+@import "shop/single-product";
+
+/**
+ * Checkout
+ */
+@import "shop/checkout";
+
+/**
+ * General WooCommerce components
+ */
+@import "shop/components";
+
+/**
+ * WooCommerce widgets
+ */
+@import "shop/widgets";
+
+// Woocommerce breadcrumbs
+@import "plugin-woocommerce-breadcrumbs"

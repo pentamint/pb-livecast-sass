@@ -1,0 +1,9 @@
+// ----- Internet Explorer Fixes
+body {
+  -ms-overflow-style: none;
+}
+// Object fit fix exclude logo
+img:not(.custom-logo) {
+  object-fit: cover;
+  font-family: 'object-fit: cover;';
+}

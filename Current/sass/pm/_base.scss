@@ -1,0 +1,14 @@
+// Show page after load all elements
+html {
+  visibility: hidden;
+}
+// Essentials
+body {
+  // Remove click highlight
+  -webkit-tap-highlight-color: transparent;
+  // Wordwrap
+  word-break: keep-all;
+}
+button:focus {
+  outline: none;
+}

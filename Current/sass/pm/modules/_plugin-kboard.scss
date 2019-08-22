@@ -1,0 +1,30 @@
+// remove branding
+.kboard-default-poweredby {
+  display: none !important;
+}
+// kboard table design
+#kboard-default-list .kboard-list table tr:first-child {
+  // background-color: #f6cb5f !important;
+}
+// pagination button
+#kboard-default-list .kboard-pagination .kboard-pagination-pages li:hover a, #kboard-default-list .kboard-pagination .kboard-pagination-pages li.active a {
+  color: #333 !important;
+  background-color: #f6cb5f !important; // default #00a8e7
+}
+// small buttons
+#kboard-default-list a.kboard-default-button-small, #kboard-default-list input.kboard-default-button-small, #kboard-default-list button.kboard-default-button-small, #kboard-default-document a.kboard-default-button-small, #kboard-default-document input.kboard-default-button-small, #kboard-default-document button.kboard-default-button-small {
+  color: #333 !important;
+  background: #f6cb5f !important;
+}
+.kboard-latest-title {
+  text-align: left !important;
+}
+#kboard-default-latest table thead {
+  background-color: #f6cb5f !important;
+}
+#kboard-default-latest table th {
+  padding: 0.625rem 0 0.625rem 0.75rem !important;
+}
+#kboard-default-latest table td {
+  padding: 0.625rem 0 0.625rem 0.75rem !important;
+}
