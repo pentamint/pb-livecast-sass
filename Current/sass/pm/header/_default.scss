@@ -1,29 +1,101 @@
 /* ----- Mobile Default ----- */
-#masthead {
-  // .pm-side-header
-  @include flexbox;
-  @include align-items(center); // vertical middle elements
-  @include justify-content(center); // mobile center logo 
-  position: fixed;
-  width: $size__site-sidebar-header;
-  top: 0;
-  z-index: 10;
+#pm-wrapper {
+  background-color: $base-color;
 
-  .site-branding {
-    .custom-logo-link {
-      display: block;
-      max-width: $size__logo-mobile-x;
-      max-height: $size__logo-mobile-y;
-      margin: 0 auto;
-    }
+  #masthead {
+    // .pm-side-header
+    position: fixed;
+    top: 0;
+    padding: 0;
+    z-index: 10;
+    height: 100%;
 
-    p {
-      display: none;
+    .masthead-container {
+      padding: 0 30px;
+
+      .site-branding {
+        .custom-logo-link {
+          display: block;
+          max-width: $size__logo-mobile-x;
+          max-height: $size__logo-mobile-y;
+          margin: 0 auto;
+        }
+
+        p {
+          display: none;
+        }
+      }
+
+      .site-title {
+        color: $site-title-color;
+        @include rfs(20);
+      }
+
+      .nav-title {
+        padding-top: 15px;
+        color: $font-color-ng;
+        @include rfs(12);
+      }
+
+      .widget {
+        margin: 0; // Header widget margin padding reset
+      }
     }
   }
 
-  .widget {
-    margin: 0; // Header widget margin padding reset
+  #secondary-header {
+    height: $height__secondary-header !important;
+    background-color: $base-sub-color;
+    -webkit-box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
+    box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
+
+    .secondary-header-wrapper {
+      height: 100%;
+      @include flexbox;
+      @include justify-content(space-between);
+
+      .secondary-header-widget-wrapper {
+        @include flexbox;
+        @include align-items(center);
+
+        .account-setting {
+          padding-right: 15px;
+          @include rfs(20);
+          color: $font-color-muted;
+
+          &:hover {
+            color: $accent-color;
+          }
+        }
+
+        .log-out {
+          padding-right: 15px;
+          @include rfs(20);
+          color: $font-color-muted;
+
+          &:hover {
+            color: $accent-color;
+          }
+        }
+
+        .welcome-block {
+          @include flexbox;
+          @include align-items(center);
+          height: 100%;
+          padding: 0 15px;
+          background-color: $base-color;
+          border: 1px solid $line-color;
+          color: $font-color-muted;
+          text-align: right;
+
+          a {
+            &:hover {
+              color: $accent-color;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -39,35 +111,155 @@
   }
 }
 
-/* ----- Responsive Hamburger Menu Position Bootstrap Support ----- */
-// xs position
-#main-header .navbar-primary .hamburger {
-  padding-right: 15px;
-}
-
-@include media-breakpoint-up(sm) {
-
-  // sm position
-  #main-header .navbar-primary .hamburger {
-    padding-right: calc((100vw - 525px)/2);
+// ---- Secondary Header Content Right Spacing --- //
+#pm-wrapper {
+  #secondary-header {
+    .secondary-header-wrapper {
+      .secondary-header-widget-wrapper {
+        margin-right: 25px;
+      }
+    }
   }
 }
 
 @include media-breakpoint-up(md) {
-
-  // md position
-  #main-header .navbar-primary .hamburger {
-    padding-right: calc((100vw - 705px)/2);
+  #pm-wrapper {
+    #secondary-header {
+      .secondary-header-wrapper {
+        .secondary-header-widget-wrapper {
+          margin-right: 35px;
+        }
+      }
+    }
   }
 }
 
-/* ----- Responsive Sidebar Header Top Margin ----- */
+/* ----- Responsive Sidebar Header & Hamburger Menu ----- */
+// Side header size
 #masthead {
+  &.show {
+    width: $size__site-sidebar-header;
+  }
+}
+
+@media (min-width: 1046px) {
+  #masthead {
+    width: $size__site-sidebar-header;
+  }
+}
+
+// Header top margin
+body.admin-bar #masthead {
   margin-top: 46px;
 }
 
 @media (min-width: 783px) {
-  #masthead {
+  body.admin-bar #masthead {
     margin-top: 32px;
+  }
+}
+
+/* ----- Slide-in Left Header Animation ----- */
+#pm-wrapper {
+  #masthead {
+    &.navbar-collapse {
+      display: block;
+      left: -$size__site-sidebar-header;
+      width: $size__site-sidebar-header;
+      @include transition(all 0.4s ease);
+      opacity: 0.8;
+    }
+
+    &.navbar-collapse.collapsing {
+      height: auto !important;
+      left: -$size__site-sidebar-header;
+      margin-left: 1px;
+      @include transition(all 0.2s ease);
+    }
+
+    &.navbar-collapse.show {
+      margin-left: $size__site-sidebar-header;
+      @include transition(all 0.2s ease);
+      opacity: 1;
+    }
+  }
+
+  #secondary-header {
+    &.navbar-collapse {
+      display: block;
+      margin-left: 0;
+      @include transition(all 0.4s ease);
+    }
+
+    &.navbar-collapse.collapsing {
+      height: auto !important;
+      margin-left: 1px;
+      @include transition(all 0.2s ease);
+    }
+
+    &.navbar-collapse.show {
+      margin-left: $size__site-sidebar-header;
+      @include transition(all 0.2s ease);
+    }
+  }
+
+  #content {
+    &.navbar-collapse {
+      display: block;
+      margin-left: 0;
+      @include transition(all 0.4s ease);
+    }
+
+    &.navbar-collapse.collapsing {
+      height: auto !important;
+      margin-left: 1px;
+      @include transition(all 0.2s ease);
+    }
+
+    &.navbar-collapse.show {
+      margin-left: $size__site-sidebar-header;
+      @include transition(all 0.2s ease);
+    }
+  }
+
+  footer#colophon {
+    &.navbar-collapse {
+      display: block;
+      margin-left: 0;
+      @include transition(all 0.4s ease);
+    }
+
+    &.navbar-collapse.collapsing {
+      height: auto !important;
+      margin-left: 1px;
+      @include transition(all 0.2s ease);
+    }
+
+    &.navbar-collapse.show {
+      margin-left: $size__site-sidebar-header;
+      @include transition(all 0.2s ease);
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  #pm-wrapper {
+    #secondary-header {
+      &.navbar-collapse {
+        margin-left: $size__site-sidebar-header;
+      }
+    }
+
+    #content {
+      &.navbar-collapse {
+        margin-left: $size__site-sidebar-header;
+      }
+    }
+
+    footer#colophon {
+      &.navbar-collapse {
+        margin-left: $size__site-sidebar-header;
+      }
+    }
   }
 }

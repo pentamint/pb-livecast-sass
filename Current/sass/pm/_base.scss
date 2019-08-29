@@ -2,6 +2,7 @@
 html {
   visibility: hidden;
 }
+
 // Essentials
 body {
   // Remove click highlight
@@ -9,6 +10,7 @@ body {
   // Wordwrap
   word-break: keep-all;
 }
+
 button:focus {
   outline: none;
 }

@@ -3,12 +3,38 @@
 /* ----- Theme Custom ----- */
 #masthead {
   background: linear-gradient(135deg,#8f75da 0,#727cf5 60%);
-  padding: 15px 30px;
   .slimScrollDiv {
     width: 100%;
-    .slimscroll-menu {
+    .masthead-container {
       .site-branding {
-        margin: 1rem 0;
+        margin: 1rem 0 2rem;
+      }
+      nav.navbar-primary {
+        .nav-wrapper {
+          #main-menu-wrapper {
+            ul#main-menu {
+              li.menu-item {
+                ul.dropdown-menu {
+                  &.show {
+                    li.menu-item {
+                      a.dropdown-item {
+                        color: #cedce4;
+                        &:hover, &:focus {
+                          color: #fff;
+                        }
+                      }
+                    }
+                  }
+                }
+                &.show {
+                  a.nav-link {
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

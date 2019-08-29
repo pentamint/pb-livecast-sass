@@ -13,6 +13,7 @@
 .site-content {
 	overflow: hidden; // parent height follow child floats
 	min-height: 37.5rem; // set min content area height
+	padding-bottom: 0;
 }
 
 // remove top margins
@@ -20,18 +21,33 @@
   margin: 0;
 }
 
-// page title hide on home
-.home .entry-header {
-  display: none;
+// page & post title
+h1.page-title, h1.entry-title {
+	@include rfs(18);
+	font-weight: 900;
+	margin-bottom: 30px;
+}
+// search result page
+.jumbotron {
+	margin-bottom: 0;
 }
 
-// add top padding
+// --- Content area padding --- //
 .site-content { // #content
 	.content-area { // #primary
-		padding-top: 5%;
+		padding: 30px 10px 45px; 
+		.column-wrapper {
+			padding: 15px 20px;
+		}
 	}
 }
-
+@include media-breakpoint-up(md) {
+	.site-content { // #content
+		.content-area { // #primary
+			padding: 30px 20px 45px;
+		}
+	}
+}
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/

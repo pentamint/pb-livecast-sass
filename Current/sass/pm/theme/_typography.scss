@@ -14,9 +14,13 @@ textarea {
 	line-height: $font__line-height-body;
 }
 h2 {
+	color: $font-color !important;
 	font-family: $font__title;
 	@include rfs(22);
 	font-weight: 700;
+}
+.ugb-container p {
+	color: $font-color !important;
 }
 @include media-breakpoint-up(sm) { // 576px and up
 

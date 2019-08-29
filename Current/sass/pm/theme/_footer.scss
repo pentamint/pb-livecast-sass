@@ -3,9 +3,8 @@
 // ----- Theme Style ----- //
 
 .site-footer {
-  .container {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  .footer-wrapper {
+    padding: 10px 10px;
     border-top: 1px solid #ccc;
   }
 }
@@ -16,11 +15,12 @@
   }
 }
 
-@include media-breakpoint-up($breakpoint__mobile-nav) {
+@include media-breakpoint-up(sm) {
   .site-footer {
-    .container {
+    .footer-wrapper {
+      padding: 10px 20px;
       .row {
-        .col-md-3 {
+        .col-md-4 {
           .pm-system-info {
             text-align: right;
           }

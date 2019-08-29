@@ -12,61 +12,107 @@
  *
  */
 
-/* ----- Primary Navbar Searchform ----- */
-// --- all viewports --- //
-nav.navbar-primary {
-  #searchform-container {
-    form {
-      .input-group {
-        >input {
-          padding-left: 0.5rem;
+/* ----- Theme Design ----- */
+// --- Side Header Layout --- //
+#secondary-header {
+  .secondary-header-wrapper {
+    >form {
+      // Secondary header searchform
+      margin-left: 15px;
+    }
+  }
 
-          @include inputPlaceholder() {
-            @include rfs(14);
-          }
-        }
+  .secondary-header-widget-wrapper {
+    text-align: center;
 
-        >span {
-          >button {
-            // floating button
-            padding: 0.4375rem 0.75rem;
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-          }
+    .search-toggle {
+      @include rfs(19);
+      color: $font-color-muted;
+      border: none;
+      background-color: transparent;
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+}
+
+
+//#secondary-header
+
+// --- xs, sm only --- //
+@include media-breakpoint-down(sm) {
+  #secondary-header {
+    .secondary-header-wrapper {
+      form#search_form {
+        position: absolute;
+        margin-top: 40px;
+        margin-left: 25px;
+        right: 30px;
+        visibility: hidden;
+        opacity: 0;
+        @include transition(all 0.2s ease);
+
+        &.is-active {
+          display: block;
+          margin-top: 60px;
+          visibility: visible;
+          opacity: 1;
         }
       }
     }
   }
 }
 
-// --- xs, sm, md only --- //
-@include media-breakpoint-down(md) {
-  nav.navbar-primary {
-    #searchform-container {
-      // position searchform below header
-      position: absolute;
-      // IE fix
-      top: 45px;
-      right: 0;
-    }
-  }
-  .btn.btn-primary {
-    display: none;
-  }
-}
+// --- md, lg, xl only --- //
+@include media-breakpoint-up(md) {
+  #secondary-header {
+    .secondary-header-wrapper {
+      .navbar-toggle {
+        display: none;
+      }
 
-// --- lg, xl only --- //
-@include media-breakpoint-up($breakpoint__mobile-nav) {
-  nav.navbar-primary {
-    #searchform-container {
-      // position searchform below header
-      position: absolute;
-      // IE fix
-      top: 45px;
-      right: 0;
+      form#search_form {
+        @include flexbox;
+        @include align-items(center);
+        margin-left: 35px;
+      }
+
+      .secondary-header-widget-wrapper {
+        .search-toggle {
+          display: none;
+        }
+      }
     }
   }
 }
 
-// ----- //
+/* ----- Default ----- */
+form#search_form {
+  max-width: 350px;
+  .input-group {
+    >input {
+      padding: 5px 10px 8px;
+      height: 38px;
 
+      @include inputPlaceholder() {
+        @include rfs(12);
+      }
+    }
+
+    >span {
+      >button {
+        // Secondary header searchform btn
+        background-color: $primary-color;
+        padding: 7px 14px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+        &:hover {
+          background-color: $secondary-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+body.archive {
+    article.post {
+        margin-bottom: 30px;
+        word-break: break-word;
+        text-align: center;
+
+        .post-wrapper {
+            -webkit-box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
+            box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
+
+            header.entry-header {
+                padding: 10px 0;
+                .entry-title {
+                    @include rfs(14);
+                }
+
+                .entry-meta {
+                    display: none;
+                }
+
+                .tags-wrapper {
+                    padding-bottom: 10px;
+
+                    >ul {
+                        @include flexbox;
+                        @include justify-content(center);
+
+                        .tags_class {
+                            border: 1px solid;
+                            border-radius: 5px;
+                            padding: 2px 5px;
+                            @include rfs(11);
+                            margin: 0 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

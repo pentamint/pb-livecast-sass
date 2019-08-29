@@ -1,31 +1,75 @@
-/*--------------------------------------------------------------
-## Sidebar Layout
---------------------------------------------------------------*/
-// Sidebar Right
-@import "../layout/content-sidebar";
-// Sidebar Left
-// @import "../layout/sidebar-content";
-
-/*--------------------------------------------------------------
-## Posts and pages
---------------------------------------------------------------*/
+@import "../layout/content-sidebar"; // sidebar layout
 @import "../../site/primary/posts-and-pages";
 @import "../content/default"; // pm resets
+@import "../content/archive-card-shadow"; // archive design
 @import "content/front-page"; // homepage
-
-/*--------------------------------------------------------------
-## Comments
---------------------------------------------------------------*/
 @import "../../site/primary/comments";
 
 /* ----- Theme Style ----- */
 // ----- Global ----- //
+.column-wrapper {
+	-webkit-box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
+	box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
+}
+body.archive {
+	article.post {
+		.post-wrapper {
+			background-color: $base-sub-color;
+
+			header.entry-header {
+				.entry-title {
+					a {
+						color: $font-color-muted;
+
+						&:hover {
+							color: $font-color-ac;
+						}
+					}
+				}
+				.tags-wrapper {
+
+					li.tags_class {
+						background-color: #ffbc00;
+						border-color: #ffbc00;
+						>a {
+							color: #fff;
+							&:hover {
+								color: #fff;
+							}
+						}
+						&:hover {
+							background-color: #d9a000;
+							border-color: #cc9600;
+						}
+						&.깨끗한 {
+							background-color: #0acf97;
+							border-color: #0acf97;
+							&:hover {
+								background-color: #08ab7c;
+								border-color: #089e74;
+							}
+						}
+						&.아름다운 {
+							background-color: #fa5c7c;
+							border-color: #fa5c7c;
+							&:hover {
+								background-color: #f9375e;
+								border-color: #f82b54;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 @include media-breakpoint-up($breakpoint__mobile-nav) {
+
 	// all posts & pages spacing bottom
 	.site-content {
 		margin-left: $size__site-sidebar-header;
-		padding-bottom: 4em;
 	}
 }
+
 // ----- End Global ----- //
