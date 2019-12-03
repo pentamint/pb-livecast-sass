@@ -1,0 +1,50 @@
+body {
+    &.blog {
+        article.post {
+            margin-bottom: 30px;
+            word-break: break-word;
+            text-align: center;
+
+            .post-wrapper {
+                -webkit-box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
+                box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
+
+                header.entry-header {
+                    padding: 10px 0;
+
+                    .entry-title {
+                        @include rfs(14);
+                    }
+
+                    .entry-meta {
+                        display: none;
+                    }
+                }
+            }
+        }        
+    }
+    &.archive {
+        article.post {
+            margin-bottom: 30px;
+            word-break: break-word;
+            text-align: center;
+
+            .post-wrapper {
+                -webkit-box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
+                box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
+
+                header.entry-header {
+                    padding: 10px 0;
+
+                    .entry-title {
+                        @include rfs(14);
+                    }
+
+                    .entry-meta {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

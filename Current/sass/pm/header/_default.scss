@@ -33,7 +33,7 @@
 
       .nav-title {
         padding-top: 15px;
-        color: $font-color-ng;
+        color: $font-color-l1;
         @include rfs(12);
       }
 
@@ -53,6 +53,7 @@
       height: 100%;
       @include flexbox;
       @include justify-content(space-between);
+      overflow: hidden;
 
       .secondary-header-widget-wrapper {
         @include flexbox;
@@ -61,7 +62,7 @@
         .account-setting {
           padding-right: 15px;
           @include rfs(20);
-          color: $font-color-muted;
+          color: $font-color-d2;
 
           &:hover {
             color: $accent-color;
@@ -71,7 +72,7 @@
         .log-out {
           padding-right: 15px;
           @include rfs(20);
-          color: $font-color-muted;
+          color: $font-color-d2;
 
           &:hover {
             color: $accent-color;
@@ -85,7 +86,7 @@
           padding: 0 15px;
           background-color: $base-color;
           border: 1px solid $line-color;
-          color: $font-color-muted;
+          color: $font-color-d2;
           text-align: right;
 
           a {

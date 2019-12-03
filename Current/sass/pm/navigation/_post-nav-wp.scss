@@ -1,42 +1,102 @@
 // Post navigation
 .post-navigation {
   width: 100%;
-  .nav-links { // wrapper
+
+  .nav-links {
+    // wrapper
     @include flexbox;
     @include justify-content(space-between);
     @include flex-wrap(wrap);
+
     .nav-previous {
-      padding: 15px;
       margin-top: 15px;
-      flex-basis: 20%;
+
+      a {
+        @include flexbox;
+        @include align-items(center);
+        padding: 15px;
+        -webkit-box-shadow: 0 2px 6px 0 rgba(238, 242, 247, .5);
+        box-shadow: 0 2px 6px 0 rgba(238, 242, 247, .5);
+        color: $font-color-d1;
+        background-color: #eef2f7;
+        border-color: #eef2f7;
+        border-radius: 3px;
+
+        &:hover {
+          background-color: #d4deeb;
+          border-color: #cbd7e7;
+          color: $font-color-d1;
+        }
+      }
+
     }
+
     .nav-next {
-      padding: 15px;
       margin-top: 15px;
-      flex-basis: 20%;
-    }
-    .title {
-      display: block;
-    }
-    .post-title {
-      display: block;
+      margin-left: auto; // flex hack - move element to the right
+
+      a {
+        @include flexbox;
+        @include align-items(center);
+        padding: 15px;
+        -webkit-box-shadow: 0 2px 6px 0 rgba(238, 242, 247, .5);
+        box-shadow: 0 2px 6px 0 rgba(238, 242, 247, .5);
+        color: $font-color-d1;
+        background-color: #eef2f7;
+        border-color: #eef2f7;
+        border-radius: 3px;
+
+        &:hover {
+          background-color: #d4deeb;
+          border-color: #cbd7e7;
+          color: $font-color-d1;
+        }
+
+        .title {
+          @include order(2);
+          padding-left: 5px;
+        }
+      }
     }
   }
+
   .fa-chevron-left {
     margin-right: 5px;
   }
+
   .fa-chevron-right {
-    margin-left: 5px;
+    margin-right: 5px;
   }
 }
+
 @include media-breakpoint-up(md) {
   .post-navigation {
     .nav-links {
       .nav-previous {
         max-width: 40%;
+
+        >a {
+
+          &:hover,
+          &:focus,
+          &:active {
+            color: $font-color-d1;
+          }
+        }
       }
+
       .nav-next {
         max-width: 40%;
+        text-align: end;
+
+        >a {
+
+          &:hover,
+          &:focus,
+          &:active {
+            color: $font-color-d1;
+          }
+        }
       }
     }
   }

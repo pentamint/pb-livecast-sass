@@ -7,9 +7,9 @@
             >ul#main-menu {
               >li.menu-item {
                 >a.nav-link {
-                  color: $font-color-ng;
+                  color: $font-color-l1;
                   &:hover {
-                    color: $font-color-ng-ac;
+                    color: $font-color-l2;
                   }
                 }
                 >ul.dropdown-menu {
@@ -24,19 +24,56 @@
 
                     >li.menu-item {
                       >a.dropdown-item {
-                        color: $font-color-ng;
+                        color: $font-color-l1;
                         &:hover,
                         &:focus {
                           background-color: transparent;
-                          color: $font-color-ng-ac;
+                          color: $font-color-l2;
                         }
                       }
                       &.active {
                         >.dropdown-item {
-                          color:$font-color-ng-ac;
+                          color: $font-color-l2;
                         }
                       }
                     }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      ul#main-menu-2 {
+        >li.menu-item {
+          >a.nav-link {
+            color: $font-color-l1;
+            &:hover {
+              color: $font-color-l2;
+            }
+          }
+          >ul.dropdown-menu {
+            padding-top: 0;
+            background-color: transparent;
+            border: none;
+            height: 0;
+            @include rfs(14);
+            @include transition(all 0.4s ease);
+            &.show {
+              height: 100%;
+
+              >li.menu-item {
+                >a.dropdown-item {
+                  color: $font-color-l1;
+                  &:hover,
+                  &:focus {
+                    background-color: transparent;
+                    color: $font-color-l2;
+                  }
+                }
+                &.active {
+                  >.dropdown-item {
+                    color: $font-color-l2;
                   }
                 }
               }

@@ -1,37 +1,24 @@
 /* ----- Light Color Scheme ----- */
 
-// ----- Theme Palette ----- //
+// ----- Main Palette ----- //
 // Primary Color - Logo
 $primary-color: #727cf5;
 // Secondary Color - Elements, BG
 $secondary-color: #4e5bf2;
 // Tertiery Color
-$tertiery-color: #23b2e9; // #0acf97;
+$tertiery-color: #0acf97; // #08ab7c; #089e74
 // Accent Color - Hover Effect
 $accent-color: #fed400;
 // Accent Sub Color
 $accent-sub-color: #AD8515;
 
-// ----- Typography ----- //
-// Primary - Light Area Font
-$font-color: #6c757d;
-// Primary Muted - Light Area Font
-$font-color-muted: #98a6ad;
-// Negative Primary - Dark Area Font
-$font-color-ng: #cedce4;
-// Accent - Light Area Accent
-$font-color-ac:  #fed400;
-// Negative Accent - Dark Area Accent
-$font-color-ng-ac: #fff;
-// Site Title
-$site-title-color: #fff;
-
-// ----- Structural ----- //
-// --- Header --- //
+// ----- Sub Palette ----- //
 // Base Color - Page Background
 $base-color: #fafbfe;
-// Base Sub Color - Secondary Header, Card Wrapper
+// Base Highlight Color - 1st Depth, Secondary Header, Card Wrapper
 $base-sub-color: #fff;
+// Base Highlight 2nd Color - 2nd Depth, Inner Header BG
+$base-sub2-color: #f1f3fa;
 
 // --- Mobile Navigation --- //
 // Negative Base Color - Nav Background
@@ -52,6 +39,22 @@ $bottom-footer-bg-color: #080c17;
 $line-color: #f1f3fa;
 // Negative Line / Divider - Dark Area
 $line-color-ng: #444;
+
+// ----- Typography ----- //
+// Primary - Dark Types
+$font-color-d1: #313a46; // lv1 - dark
+$font-color-d2: #6c757d; // lv2 - darker
+$font-color-d3: #98a6ad; // lv3 - darkest
+// Negative Primary - Dark Area Font
+$font-color-l1: #cedce4; // lv1 - light
+$font-color-l2: #fff; // lv2 - lighter
+$font-color-l3: #fff; // lv3 - lightest
+// Accent - Light Area Accent
+$font-color-ac1:  #fed400; // lv1 - bright
+$font-color-ac2:  #AD8515; // lv2 - dull
+// Negative Accent - Dark Area Accent
+// Site Title
+$site-title-color: #fff;
 
 // ----- Underscore Default ----- //
 

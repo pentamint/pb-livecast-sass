@@ -1,0 +1,16 @@
+// Initialize ui, plugin components & update core modules
+@import "pm/modules/ui-searchform";
+@import "pm/modules/plugin-kboard";
+
+/* ----- Theme Style ----- */
+// --- Core mods --- //
+
+
+@include media-breakpoint-up($breakpoint__mobile-nav) {
+
+}
+
+// --- Kboard --- //
+#kboard-default-latest table thead {
+    background-color: $base-sub2-color !important;
+  }

@@ -1,34 +1,47 @@
 @import "../header/default";
 
 /* ----- Theme Custom ----- */
-#masthead {
-  background: linear-gradient(135deg,#8f75da 0,#727cf5 60%);
-  .slimScrollDiv {
-    width: 100%;
-    .masthead-container {
-      .site-branding {
-        margin: 1rem 0 2rem;
-      }
-      nav.navbar-primary {
-        .nav-wrapper {
-          #main-menu-wrapper {
-            ul#main-menu {
-              li.menu-item {
-                ul.dropdown-menu {
-                  &.show {
-                    li.menu-item {
-                      a.dropdown-item {
-                        color: #cedce4;
-                        &:hover, &:focus {
-                          color: #fff;
+#pm-wrapper {
+  #masthead {
+    background: linear-gradient(135deg, #8f75da 0, #727cf5 60%);
+
+    .slimScrollDiv {
+      width: 100%;
+
+      .masthead-container {
+        .site-branding {
+          margin: 0.875rem 0 2.25rem;
+        }
+
+        .site-title {
+          @include rfs(16);
+          font-weight: 900;
+        }
+
+        nav.navbar-primary {
+          .nav-wrapper {
+            #main-menu-wrapper {
+              ul#main-menu {
+                li.menu-item {
+                  ul.dropdown-menu {
+                    &.show {
+                      li.menu-item {
+                        a.dropdown-item {
+                          color: $font-color-l1;
+
+                          &:hover,
+                          &:focus {
+                            color: $font-color-l2;
+                          }
                         }
                       }
                     }
                   }
-                }
-                &.show {
-                  a.nav-link {
-                    color: #fff;
+
+                  &.show {
+                    a.nav-link {
+                      color: $font-color-l1;
+                    }
                   }
                 }
               }
@@ -39,9 +52,7 @@
     }
   }
 }
-@include media-breakpoint-up($breakpoint__mobile-nav) {
 
-}
-@include media-breakpoint-down(md) {
+@include media-breakpoint-up($breakpoint__mobile-nav) {}
 
-}
+@include media-breakpoint-down(md) {}

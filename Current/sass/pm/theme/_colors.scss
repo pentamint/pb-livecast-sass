@@ -16,38 +16,6 @@
     }
   }
 }
-// --- Footer --- //
-#top-footer {
-  background-color: $top-footer-bg-color;
-}
-#main-footer {
-  background-color: $footer-bg-color;
-  border-top-color: $secondary-color;
-}
-#bottom-footer {
-  background-color: $bottom-footer-bg-color;
-  border-top-color: $line-color-ng;
-  .container {
-    .row {
-      > div {
-        &:nth-of-type(1) {
-          // column 1
-          footer {
-            .site-info {
-              color: $font-color-ng;
-              > a {
-                color: $font-color-ng;
-                &:hover {
-                  color: $font-color-ng-ac;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
 
 // ----- Medium Devices and Smaller (xs,sm,md) ----- //
 @media (max-width: 991.98px) {
@@ -82,16 +50,16 @@
                     }
                     > a {
                       // .nav-link
-                      color: $font-color-ng;
+                      color: $font-color-l1;
                       &:hover {
                           background-color: #0f182b;
                       }
                       &[aria-expanded="true"] {
                         background-color: #0f182b;
-                        color: $font-color-ng;
+                        color: $font-color-l1;
                         &:hover {
                           background-color: #0f182b;
-                          color: $font-color-ng;
+                          color: $font-color-l1;
                         }
                       }
                       &[aria-expanded="false"] {
@@ -108,19 +76,19 @@
                           > a {
                             // .dropdown-item
                             background-color: #080c17;
-                            color: $font-color-ng;
+                            color: $font-color-l1;
                             &:hover {
-                              color: $font-color-ng;
+                              color: $font-color-l1;
                             }
                           }
                           &.current-menu-item {
                             > a {
                               // .dropdown-item
                               background-color: $ng-base-sub-color;
-                              color: $font-color-ng;
+                              color: $font-color-l1;
                               &:hover {
                                 background-color: $ng-base-sub-color;
-                                color: $font-color-ng;
+                                color: $font-color-l1;
                               }
                             }
                           }
@@ -143,16 +111,6 @@
   // ----- PC Header ----- //
   .site-header {
     // #masthead header
-    #top-header {
-      // Top header background
-      background-color: $base-color;
-      // PC header border top
-      border-top-color: $secondary-color;
-      // Top header right widget divider
-      li:not(:first-child):before {
-        background-color: $line-color;
-      }
-    }
     #main-header {
       .container {
         nav {
@@ -168,46 +126,15 @@
                     // .nav-link
                     &:hover {
                       // main nav menu item hover color
-                      color: $accent-color;
+                      color: $font-color-ac1;
                     }
                   }
                   &.current-menu-item {
                     > a {
                       // .nav-link
                       // current main nav menu item color
-                      color: $accent-color;
+                      color: $font-color-ac1;
                     }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  #top-footer {
-    background-color: $top-footer-bg-color;
-  }
-  #main-footer {
-    background-color: $footer-bg-color;
-    border-top-color: $secondary-color;
-  }
-  #bottom-footer {
-    background-color: $bottom-footer-bg-color;
-    border-top-color: $line-color-ng;
-    .container {
-      .row {
-        > div {
-          &:nth-of-type(1) {
-            // column 1
-            footer {
-              .site-info {
-                color: $font-color-ng;
-                > a {
-                  color: $font-color-ng;
-                  &:hover {
-                    color: $font-color-ng-ac;
                   }
                 }
               }
@@ -237,16 +164,3 @@
     border-color: $primary-color;
   }
 }
-
-// --- Custom Mobile Icons --- //
-#mobile-header-widget-1 {
-  a {
-    // my account widget icon
-    color: $font-color;
-    &:hover {
-      color: $font-color-ac;
-    }
-  }
-}
-
-// ----- //

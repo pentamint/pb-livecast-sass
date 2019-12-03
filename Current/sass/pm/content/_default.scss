@@ -32,10 +32,13 @@ h1.page-title, h1.entry-title {
 	margin-bottom: 0;
 }
 
-// --- Content area padding --- //
+// Content area //
 .site-content { // #content
 	.content-area { // #primary
 		padding: 30px 10px 45px; 
+		h2 {
+			@include rfs(15);
+		}
 		.column-wrapper {
 			padding: 15px 20px;
 		}

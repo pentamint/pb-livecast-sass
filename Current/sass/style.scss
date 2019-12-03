@@ -59,14 +59,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "pm/theme/footer";
 
 /*--------------------------------------------------------------
-# Custom UI Components
---------------------------------------------------------------*/
-
-@import "pm/modules/ui-searchform";
-@import "pm/modules/ui-social-widget";
-@import "pm/modules/ui-page-header-banner";
-
-/*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
 @import "pm/elements/elements";
@@ -113,8 +105,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "pm/applications/hamburgers/hamburgers";
 
 /*--------------------------------------------------------------
-# Theme Plugins & Modules
+# Load Theme Components
 --------------------------------------------------------------*/
-@import "pm/modules/plugin-custom-content-shortcode";
-@import "pm/modules/plugin-tablepress";
-@import "pm/modules/plugin-kboard";
+@import "pm/theme/modules";
+

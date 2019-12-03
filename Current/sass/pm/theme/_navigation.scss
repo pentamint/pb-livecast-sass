@@ -1,4 +1,5 @@
 @import "../navigation/default";
+@import "../navigation/post-nav-wp";
 
 /*--------------------------------------------------------------
 ## Links
@@ -60,25 +61,25 @@
 }
 
 .korea_flag:before {
-    content: url(/spc-livecast/wp-content/uploads/2019/08/south-korea.svg);
+    content: url(/pb-livecast/wp-content/uploads/2019/08/south-korea.svg);
 }
 
 .usa_flag:before {
-    content: url(/spc-livecast/wp-content/uploads/2019/08/united-states.svg);
+    content: url(/pb-livecast/wp-content/uploads/2019/08/united-states.svg);
 }
 
 .china_flag:before {
-    content: url(/spc-livecast/wp-content/uploads/2019/08/china-flag.svg);
+    content: url(/pb-livecast/wp-content/uploads/2019/08/china-flag.svg);
 }
 
 .singapore_flag:before {
-    content: url(/spc-livecast/wp-content/uploads/2019/08/singapore-flag.svg);
+    content: url(/pb-livecast/wp-content/uploads/2019/08/singapore-flag.svg);
 }
 
 .france_flag:before {
-    content: url(/spc-livecast/wp-content/uploads/2019/08/france-flag.svg);
+    content: url(/pb-livecast/wp-content/uploads/2019/08/france-flag.svg);
 }
 
 .vietnam_flag:before {
-    content: url(/spc-livecast/wp-content/uploads/2019/08/vietnam-flag.svg);
+    content: url(/pb-livecast/wp-content/uploads/2019/08/vietnam-flag.svg);
 }

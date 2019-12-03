@@ -1,9 +1,10 @@
-@import "../layout/content-sidebar"; // sidebar layout
+// Layouts
+@import "../layout/content-sidebar";
 @import "../../site/primary/posts-and-pages";
 @import "../content/default"; // pm resets
-@import "../content/archive-card-shadow"; // archive design
-@import "content/front-page"; // homepage
+// Widgets
 @import "../../site/primary/comments";
+@import "../elements/widgets/archive-card-shadow";
 
 /* ----- Theme Style ----- */
 // ----- Global ----- //
@@ -11,51 +12,69 @@
 	-webkit-box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
 	box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
 }
-body.archive {
-	article.post {
-		.post-wrapper {
-			background-color: $base-sub-color;
 
-			header.entry-header {
-				.entry-title {
-					a {
-						color: $font-color-muted;
-
-						&:hover {
-							color: $font-color-ac;
+body {
+	&.blog { // Front Page
+		article.post {
+			.post-wrapper {
+				background-color: $base-sub-color;
+	
+				header.entry-header {
+					.entry-title {
+						a {
+							color: $font-color-d2;
+	
+							&:hover {
+								color: $font-color-ac1;
+							}
 						}
 					}
 				}
-				.tags-wrapper {
-
-					li.tags_class {
-						background-color: #ffbc00;
-						border-color: #ffbc00;
-						>a {
-							color: #fff;
+				.entry-content {
+					display: none;
+				}
+			}
+		}		
+	}
+	&.archive { // Archive Pages
+		article.post {
+			.post-wrapper {
+				background-color: $base-sub-color;
+	
+				header.entry-header {
+					.entry-title {
+						a {
+							color: $font-color-d2;
+	
 							&:hover {
-								color: #fff;
+								color: $font-color-ac1;
 							}
 						}
-						&:hover {
-							background-color: #d9a000;
-							border-color: #cc9600;
-						}
-						&.깨끗한 {
-							background-color: #0acf97;
-							border-color: #0acf97;
-							&:hover {
-								background-color: #08ab7c;
-								border-color: #089e74;
-							}
-						}
-						&.아름다운 {
-							background-color: #fa5c7c;
-							border-color: #fa5c7c;
-							&:hover {
-								background-color: #f9375e;
-								border-color: #f82b54;
-							}
+					}
+				}
+				.entry-content {
+					display: none;
+				}
+			}
+		}
+	}
+	&.single { // Single Posts
+		article.post {
+			.post-wrapper {
+				.post-thumbnail {
+					display: none;
+				}
+				header.entry-header {
+					text-align: center;
+					h1.entry-title {
+						margin-bottom: 10px;
+					}
+					.entry-meta {
+						display: none;
+					}
+					.tags-wrapper {
+						>ul {
+							@include justify-content(center);
 						}
 					}
 				}
@@ -64,12 +83,87 @@ body.archive {
 	}
 }
 
+
 @include media-breakpoint-up($breakpoint__mobile-nav) {
 
 	// all posts & pages spacing bottom
 	.site-content {
 		margin-left: $size__site-sidebar-header;
 	}
+}
+
+// --- Tags module --- //
+.tags-wrapper {
+	>ul {
+		@include flexbox;
+		@include justify-content(flex-start);
+
+		li.tags_class {
+			border: 1px solid;
+			border-radius: 5px;
+			padding: 2px 5px;
+			@include rfs(11);
+			margin: 0 5px;
+			background-color: #ffbc00;
+			border-color: #ffbc00 !important;
+
+			>a {
+				color: $font-color-l1;
+
+				&:hover {
+					color: $font-color-l2;
+				}
+			}
+
+			&:hover {
+				background-color: #d9a000;
+				border-color: #cc9600 !important;
+				;
+			}
+
+			&.깨끗한 {
+				background-color: #0acf97;
+				border-color: #0acf97 !important;
+				;
+
+				&:hover {
+					background-color: #08ab7c;
+					border-color: #089e74 !important;
+					;
+				}
+			}
+
+			&.아름다운 {
+				background-color: #fa5c7c;
+				border-color: #fa5c7c !important;
+				;
+
+				&:hover {
+					background-color: #f9375e;
+					border-color: #f82b54 !important;
+					;
+				}
+			}
+		}
+	}
+}
+
+body {
+	&.blog {
+		.tags-wrapper {
+			>ul {
+				@include justify-content(center);
+			}
+		}	
+	}
+	&.archive {
+		.tags-wrapper {
+			>ul {
+				@include justify-content(center);
+			}
+		}
+	}
+	
 }
 
 // ----- End Global ----- //

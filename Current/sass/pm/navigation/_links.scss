@@ -1,13 +1,13 @@
 a {
-	color: $font-color;
+	color: $font-color-d1;
 
 	&:visited {
-		color: $font-color;
+		color: $font-color-d1;
 	}
 	&:hover,
 	&:focus,
 	&:active {
-		color: $font-color-ng-ac;
+		color: $font-color-l2;
 	}
 	&:focus {
 		outline: 0;

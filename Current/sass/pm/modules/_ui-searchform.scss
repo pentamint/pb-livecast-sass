@@ -27,12 +27,12 @@
 
     .search-toggle {
       @include rfs(19);
-      color: $font-color-muted;
+      color: $font-color-d2;
       border: none;
       background-color: transparent;
 
       &:hover {
-        color: $accent-color;
+        color: $font-color-ac1;
       }
     }
   }

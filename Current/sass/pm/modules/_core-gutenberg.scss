@@ -1,8 +1,8 @@
 // ----- Gutenberg ----- //
 // --- Default --- //
-
 // --- Bootstrap Support --- //
 // - Grid System Fixes - //
+
 @media (min-width: 600px) {
   .wp-block-column:nth-child(2n) {
     margin-left: 0; // 32px;
@@ -21,12 +21,12 @@
   margin-top: 0;
   margin-bottom: 0;
   // add top padding
-  padding-top: 5rem;
+  padding-top: 0;
   // remove top padding on first child
   &:first-child {
     padding-top: 0;
   }
-} // !--- Default --- //
+}
 // --- Bootstrap Support for Stackable - Gutenberg Blocks --- //
 // - Reset Stackable padding properties - //
 .ugb--has-background, .ugb-has-background {
